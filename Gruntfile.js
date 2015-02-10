@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     'lib/jsbn/jsbn2.js',
     'lib/jsbn/prng4.js',
     'lib/jsbn/rng.js',
-    'lib/jsbn/rsa.js',
+    'src/rsa.js',
     'lib/jsbn/rsa2.js',
     'lib/jsbn/rsa-async.js',
     'lib/jsbn/base64.js',

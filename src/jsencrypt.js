@@ -316,9 +316,9 @@ RSAKey.prototype.parsePropertiesFrom = function (obj) {
  * the parameters needed to build a RSAKey object.
  * @constructor
  */
-var JSEncryptRSAKey = function (key) {
+var JSEncryptRSAKey = function (key, repeatable) {
   // Call the super constructor.
-  RSAKey.call(this);
+  RSAKey.call(this, repeatable);
   // If a key key was provided.
   if (key) {
     // If this is a string...
@@ -353,6 +353,7 @@ JSEncryptRSAKey.prototype.constructor = JSEncryptRSAKey;
  */
 var JSEncrypt = function (options) {
   options = options || {};
+  this.repeatable = options.repeatable || false;
   this.default_key_size = parseInt(options.default_key_size) || 1024;
   this.default_public_exponent = options.default_public_exponent || '010001'; //65537 default openssl public exponent for rsa key type
   this.log = options.log || false;
@@ -371,7 +372,7 @@ JSEncrypt.prototype.setKey = function (key) {
   if (this.log && this.key) {
     console.warn('A key was already set, overriding existing.');
   }
-  this.key = new JSEncryptRSAKey(key);
+  this.key = new JSEncryptRSAKey(key, this.repeatable);
 };
 
 /**
