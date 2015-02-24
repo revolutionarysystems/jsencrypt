@@ -1,15 +1,1 @@
-{
-	"name": "revsys-jsencrypt",
-	"version": "0.1.0-SNAPSHOT",
-	"artifacts": [{
-		"files": [{
-			"bin/jsencrypt.js": "jsencrypt.js"
-		}]
-	}],
-	"repositories": {
-		"distribution": [{
-			"url": "http://build.revsys.co.uk/haven-repository"
-		}]
-	},
-	"dependencies": []
-}
+{"name":"revsys-jsencrypt","version":"0.1.0","artifacts":[{"files":[{"bin/jsencrypt.js":"jsencrypt.js"}]}],"repositories":{"distribution":[{"url":"http://build.revsys.co.uk/haven-repository"}]},"dependencies":[]}
