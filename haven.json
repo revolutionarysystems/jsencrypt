@@ -1,6 +1,6 @@
 {
 	"name": "revsys-jsencrypt",
-	"version": "0.1.0-SNAPSHOT",
+	"version": "0.3.0-SNAPSHOT",
 	"artifacts": [{
 		"files": [{
 			"bin/jsencrypt.js": "jsencrypt.js"
